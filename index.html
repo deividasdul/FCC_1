@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">
+        Participate in our survey to contribute valuable insights that will
+        inform future research and decision-making. Your input is crucial in
+        shaping our understanding of various trends and preferences across
+        different demographics.
+      </p>
+
+      <form method="post" action="index.html" id="survey-form">
+        <fieldset>
+          <label for="name" id="name-label">Enter your name:</label>
+          <input id="name" placeholder="David" required type="text" />
+          <label for="email" id="email-label">Enter your e-mail:</label>
+          <input
+            id="email"
+            placeholder="david@gmail.com"
+            required
+            type="email"
+          />
+          <label for="number" id="number-label">Enter your age:</label>
+          <input
+            id="number"
+            min="1"
+            max="120"
+            placeholder="18"
+            required
+            type="number"
+          />
+          <hr />
+          <label for="dropdown">Where did you find this survey:</label>
+          <select id="dropdown">
+            <option>Select</option>
+            <option>From YouTube</option>
+            <option>From Discord</option>
+          </select>
+          <div class="display-block">
+            <hr />
+            <label>I like to code:</label>
+            <section>
+              <input
+                id="i-agree"
+                class="inline"
+                value="i-agree"
+                name="like-to-code"
+                type="radio"
+                checked
+              />
+              <label class="inline" for="i-agree">I agree</label>
+            </section>
+            <section>
+              <input
+                id="i-disagree"
+                class="inline"
+                value="i-disagree"
+                name="like-to-code"
+                type="radio"
+              />
+              <label class="inline" for="i-disagree">I disagree</label>
+            </section>
+            <hr />
+          </div>
+          <label>Reasons why I like to code:</label>
+          <section>
+            <label class="inline" for="fun">Fun</label>
+            <input id="fun" value="1" type="checkbox" />
+          </section>
+          <section>
+            <label class="inline" for="challenging">Challenging</label>
+            <input id="challenging" value="2" type="checkbox" />
+          </section>
+          <section>
+            <label class="inline" for="interesting">Interesting</label>
+            <input id="interesting" value="3" type="checkbox" />
+          </section>
+          <label class="inline" for="other">Other</label>
+          <input id="other" value="4" type="checkbox" />
+          <hr />
+          <label for="information">Additional comments:</label>
+          <textarea  id="information" cols="25" rows="5"></textarea>
+        </fieldset>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
